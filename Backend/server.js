@@ -26,7 +26,7 @@ mongoose.connect(DB).then(() => {
 });
 
 // For testing API's on POSTMAN
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 io.on("connection", (socket) => {
   
