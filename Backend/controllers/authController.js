@@ -63,7 +63,7 @@ exports.signUp = catchAsync(async (req, res, next) => {
     title: req.body.title,
   });
 
-  const url = `http://localhost:8080/profile`;
+  const url = `http://localhost:4000/profile`;
 
   await new Email(newUser, url).sendWelcome();
 
@@ -230,7 +230,7 @@ exports.forgotPassword = async (req, res, next) => {
 
     try {
       // 3️⃣ ) Send it to user's email
-      const resetURL = `http://localhost:8080/resetPassword/${resetToken}`;
+      const resetURL = `http://localhost:4000/resetPassword/${resetToken}`;
 
       // --------- Lec_10 ----------
       await new Email(user, resetURL).sendPasswordReset();
